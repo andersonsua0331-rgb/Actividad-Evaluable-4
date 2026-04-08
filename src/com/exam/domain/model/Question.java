@@ -10,10 +10,10 @@ public abstract class Question {
     protected final String text;
     protected final AnswerText correctAnswer;
 
-    public Question(QuestionId id, String text, AnswerText correctAnswer){
+    public Question (QuestionId id, String text, AnswerText correctAnswer){
         this.id = id;
         this.text = text;
-        this.correctAnswer= correctAnswer;
+        this.correctAnswer = correctAnswer;
     }
 
     public QuestionId getId(){

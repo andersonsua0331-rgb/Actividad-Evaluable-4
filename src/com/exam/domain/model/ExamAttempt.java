@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class ExamAttempt {
 
-    private final studentId studentId;
+    private final StudentId studentId;
     private final Map<QuestionId, AnswerText> ansMap;
     private boolean finished;
 
@@ -23,7 +23,7 @@ public class ExamAttempt {
         if (finished) {
             throw new IllegalStateException("El intento ya esta finalixado ");
         }
-        answer.putt(questionId, answer);
+        //answer.putt(questionId, answer);
     }
 
     public void finish(){

@@ -19,8 +19,7 @@ public class QuestionTypes {
 
         @Override
         public boolean isCorrect(AnswerText studentAnswer) {
-            return correctAnswer.value().trim()
-                    .equalsIgnoreCase(studentAnswer.value().trim());
+            return correctAnswer.value().trim().equalsIgnoreCase(studentAnswer.value().trim());
         }
 
         @Override
@@ -55,7 +54,16 @@ public class QuestionTypes {
             super(id, text, correct);
 
         }
+        @Override
+        public boolean isCorrect(AnswerText studentAnswer) {
+            return correctAnswer.value().trim().equalsIgnoreCase(studentAnswer.value().trim()); 
+        }
+        @Override
+        public void displayFormat() {
+            System.out.println("[Completar el espacio en blanco] " + text);
+            System.out.println("Escriba su respuesta: ______"); 
     }
+}
 
         public static class MultipleChoiceQuestion extends Question {
 
@@ -84,4 +92,5 @@ public class QuestionTypes {
             options.forEach(o -> System.out.println("( ) " + o));
         }
     }
+    
 }
